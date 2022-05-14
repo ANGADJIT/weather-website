@@ -1,0 +1,113 @@
+body {
+    background: #3a7bd5;
+    background: -webkit-linear-gradient(to bottom right, #3a6073, #3a7bd5) no-repeat fixed;
+    background: linear-gradient(to bottom right, #3a6073, #3a7bd5) no-repeat fixed;
+}
+
+::selection {
+    background-color: rgb(137, 146, 155);
+}
+
+#heading {
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Oswald', sans-serif;
+    color: aliceblue;
+    animation-name: heading-anim;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 4s;
+}
+
+@keyframes heading-anim {
+    from {
+        font-size: 2.5em;
+        opacity: .1;
+    }
+
+    to {
+        font-size: 3.0em;
+        opacity: 1.0;
+    }
+}
+
+#search-bar {
+    height: 5vh;
+    font-size: .9em;
+    line-height: 0;
+    max-width: 20%;
+    min-width: auto;
+    border: none;
+    outline: none;
+    border-bottom: .1em solid #879094;
+    text-decoration: wavy;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(to bottom right, #3a6073, #3a7bd5) no-repeat fixed;
+    background: linear-gradient(to bottom right, #3a6073, #3a7bd5) no-repeat fixed;
+    color: #badbed;
+}
+
+#weather-card {
+    height: 70vh;
+    width: 83vw;
+    box-shadow: 0 .2em .4em 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 12vh;
+}
+
+#tile {
+    background-color: #4d4d4d;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.circle {
+    width: 2%;
+    height: 50%;
+    margin-inline: .3%;
+    border-radius: 51%;
+    background-color: #9b9998;
+}
+
+#main-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+#weather-img {
+    width: 10%;
+    margin-inline: 2vw;
+}
+
+#main-temp {
+    color: #fafafa;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    margin-inline: 2vw;
+}
+
+#sub-info {
+    display: block;
+    margin-inline: 4vw;
+}
+
+#wind-speed {
+    color: #fafafa;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1em;
+}
+
+#min-temp {
+    color: #fafafa;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1em;
+}
