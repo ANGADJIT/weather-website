@@ -9,24 +9,33 @@ body {
 }
 
 #heading {
-    font-family: 'Architects Daughter', cursive;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Shadows Into Light', cursive;
     color: aliceblue;
+    font-size: 3em;
     animation-name: heading-anim;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-duration: 4s;
 }
 
+
 @keyframes heading-anim {
-    from {
-        font-size: 2.5em;
-        opacity: .1;
+    0% {
+        margin-left: 7vw;
+        opacity: 1.0;
+        color: aliceblue;
     }
 
-    to {
-        font-size: 3.0em;
+    50% {
+        margin-left: 60vw;
+        opacity: .5;
+        color: rgb(90, 154, 210);
+    }
+
+    100% {
+        margin-left: 7vw;
         opacity: 1.0;
+        color: aliceblue;
     }
 }
 
@@ -50,7 +59,7 @@ body {
 }
 
 #weather-card {
-    height: 70vh;
+    height: 75vh;
     width: 83vw;
     box-shadow: 0 .2em .4em 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 12vh;
@@ -81,7 +90,7 @@ body {
 }
 
 #weather-img {
-    width: 10%;
+    width: 8%;
     margin-inline: 2vw;
 }
 
@@ -110,4 +119,35 @@ body {
     font-family: 'Architects Daughter', cursive;
     font-family: 'Oswald', sans-serif;
     font-size: 1.1em;
+}
+
+#max-temp {
+    color: #fafafa;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1em;
+}
+
+#more-info {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#date-w {
+    color: #fafafa;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    margin-inline: .4em;
+}
+
+#coun-city {
+    color: #fafafa;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    margin-inline: .4em;
 }
