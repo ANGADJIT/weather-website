@@ -7,8 +7,8 @@ function kelvinToCelcius(kelvin) {
 
 // This sets content to ui
 async function setContentToUi(data) {
-    
-    var date=new Date();
+
+    var date = new Date();
 
     document.getElementById('main-temp').innerHTML = `${kelvinToCelcius(data.main.temp)} <sup>o</sup>C`;
     document.getElementById('wind-speed').innerHTML = `💨 ${data.wind.speed} <sub style="font-weight: 400;">mph</sub>`;
@@ -33,7 +33,7 @@ async function loadWeatherDataFromApiAndSetToUi(cityName) {
     if (weatherJsonMap.cod == '200') {
         await setContentToUi(weatherJsonMap);
     }
-    else{
+    else {
         alert('No city found 🙄');
     }
 
@@ -46,6 +46,12 @@ window.onload = async function () {
 $(document).ready(function () {
     $('#search-bar').change(async function (e) {
         var cityName = $(this).val();
-        await loadWeatherDataFromApiAndSetToUi(cityName);
+
+        if (cityName.length != 0) {
+            await loadWeatherDataFromApiAndSetToUi(cityName);
+        }
+        else{
+            alert('City name required 🙂');
+        }
     });
 });
